@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<class>
+    <student>
+        <firstname>TestName</firstname>
+        <lastname>TestLastname</lastname>
+        <university>NTU"KhPI"</university>
+        <currentyear>3</currentyear>
+        <graduation>2017</graduation>
+    </student>
+    <student>
+        <firstname>SecTestName</firstname>
+        <lastname>SecTestLastname</lastname>
+        <university>NTU"KhPI"</university>
+        <currentyear>2</currentyear>
+        <graduation>2018</graduation>
+    </student>
+    <worker>
+        <firstname>testWorkerName</firstname>
+        <lastname>testWorkerLastname</lastname>
+        <position>developer</position>
+        <education>high</education>
+        <experience>middle</experience>
+        <english>intermediate</english>
+    </worker>
+</class>

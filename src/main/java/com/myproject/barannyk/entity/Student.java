@@ -1,13 +1,16 @@
 package com.myproject.barannyk.entity;
 
+import lombok.Builder;
+
 /**
  * Created by Roman_Barannyk on 11/16/2016.
  */
+@Builder
 public class Student extends Person {
 
     private String nameOfUniversity;
-    private int currentYear;
-    private int yearOfGraduation;
+    private String currentYear;
+    private String yearOfGraduation;
 
     public String getNameOfUniversity() {
         return nameOfUniversity;
@@ -17,19 +20,19 @@ public class Student extends Person {
         this.nameOfUniversity = nameOfUniversity;
     }
 
-    public int getCurrentYear() {
+    public String getCurrentYear() {
         return currentYear;
     }
 
-    public void setCurrentYear(int currentYear) {
+    public void setCurrentYear(String currentYear) {
         this.currentYear = currentYear;
     }
 
-    public int getYearOfGraduation() {
+    public String getYearOfGraduation() {
         return yearOfGraduation;
     }
 
-    public void setYearOfGraduation(int yearOfGraduation) {
+    public void setYearOfGraduation(String yearOfGraduation) {
         this.yearOfGraduation = yearOfGraduation;
     }
 }

@@ -3,11 +3,11 @@ package com.myproject.barannyk.entity;
 /**
  * Created by Roman_Barannyk on 11/16/2016.
  */
+
 public class Person {
 
     private String name;
     private String lastName;
-    private int age;
 
     public String getName() {
         return name;
@@ -23,13 +23,5 @@ public class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 }
