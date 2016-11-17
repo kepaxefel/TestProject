@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface EntityService {
 
-    public void saveEntityList(List<Person> entityList);
+    void saveEntityList(List<Person> entityList);
 }

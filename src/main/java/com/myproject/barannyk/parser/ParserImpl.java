@@ -28,6 +28,7 @@ public class ParserImpl implements Parser {
 
     private static final Logger LOG = Logger.getLogger(ParserImpl.class);
 
+    @Override
     public List<Person> getEntityList(String filename, String group) {
         List<Person> listPerson = new ArrayList<>();
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();

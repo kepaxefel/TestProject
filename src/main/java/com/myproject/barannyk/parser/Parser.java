@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface Parser {
 
-    public List<Person> getEntityList(String filename, String group);
+    List<Person> getEntityList(String filename, String group);
 }
