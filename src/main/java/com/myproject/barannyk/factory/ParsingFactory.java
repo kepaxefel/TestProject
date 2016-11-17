@@ -22,6 +22,8 @@ public class ParsingFactory {
 
     private static Person createStudent(Element element){
         Student student = Student.builder()
+                .name(element.getElementsByTagName(PERSON_NAME).item(0).getTextContent())
+                .lastName(element.getElementsByTagName(PERSON_LASTNAME).item(0).getTextContent())
                 .nameOfUniversity(element.getElementsByTagName(STUDENT_UNIVERSITY).item(0).getTextContent())
                 .currentYear(element.getElementsByTagName(STUDENT_CURRENT_YEAR).item(0).getTextContent())
                 .yearOfGraduation(element.getElementsByTagName(STUDENT_GRADUATION).item(0).getTextContent()).build();
@@ -30,6 +32,8 @@ public class ParsingFactory {
 
     private static Person createWorker(Element element){
         Worker worker = Worker.builder()
+                .name(element.getElementsByTagName(PERSON_NAME).item(0).getTextContent())
+                .lastName(element.getElementsByTagName(PERSON_LASTNAME).item(0).getTextContent())
                 .position(element.getElementsByTagName(WORKER_POSITION).item(0).getTextContent())
                 .education(element.getElementsByTagName(WORKER_EDUCATION).item(0).getTextContent())
                 .experience(element.getElementsByTagName(WORKER_EXPERIENCE).item(0).getTextContent())

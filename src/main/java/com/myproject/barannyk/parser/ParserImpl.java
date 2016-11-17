@@ -38,8 +38,7 @@ public class ParserImpl implements Parser {
             Document doc = dBuilder.parse(inputFile);
             doc.getDocumentElement().normalize();
             NodeList nodeList = doc.getElementsByTagName(group);
-            Optional.ofNullable(nodeList).ifPresent(nodes ->
-            {
+            Optional.ofNullable(nodeList).ifPresent(node -> {
                 for (int currentNumber = 0; currentNumber < nodeList.getLength(); currentNumber++) {
                     Node currentNode = nodeList.item(currentNumber);
                     addToList(currentNode, listPerson, group);
@@ -55,12 +54,10 @@ public class ParserImpl implements Parser {
         return listPerson;
     }
 
-    private void addToList(Node currentNode, List<Person> listPerson, String group ) {
+    private void addToList(Node currentNode, List<Person> listPerson, String group) {
         if (currentNode.getNodeType() == Node.ELEMENT_NODE) {
             Element currentElement = (Element) currentNode;
             Person currentPerson = ParsingFactory.getInstance(currentElement, group);
-            currentPerson.setName(currentElement.getElementsByTagName(PERSON_NAME).item(0).getTextContent());
-            currentPerson.setLastName(currentElement.getElementsByTagName(PERSON_LASTNAME).item(0).getTextContent());
             listPerson.add(currentPerson);
         }
     }
